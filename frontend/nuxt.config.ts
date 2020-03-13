@@ -1,4 +1,5 @@
 export default {
+  mode: "universal",
   env: {},
   head: {
     title: "frontend",
@@ -16,7 +17,7 @@ export default {
   loading: { color: "#3B8070" },
   css: ["~/assets/css/main.css"],
   build: {},
-  buildModules: ["@nuxt/typescript-build"],
+  buildModules: ["@nuxt/typescript-build", "@nuxtjs/vuetify"],
   modules: ["@nuxtjs/axios"],
   axios: {}
 };
