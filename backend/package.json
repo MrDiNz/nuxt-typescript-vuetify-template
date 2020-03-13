@@ -1,0 +1,44 @@
+{
+  "name": "wordpress-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx nodemon",
+    "postbuild": "npm run copy-files",
+    "copy-files": "npx copyfiles -u 1 src/**/*.js dist/src",
+    "build": "npx tsc",
+    "start": "node -r ./tsconfig-paths-bootstrap.js dist/src/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.6",
+    "cloudinary": "^1.15.0",
+    "connect-history-api-fallback": "^1.5.0",
+    "connect-mssql": "^1.5.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "lodash": "^4.17.11",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.1",
+    "session-file-store": "^1.3.1",
+    "tslib": "^1.9.3",
+    "underscore": "^1.9.1",
+    "util": "^0.12.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/connect-history-api-fallback": "^1.3.1",
+    "@types/express": "^4.16.0",
+    "@types/express-session": "^1.15.13",
+    "@types/lodash": "^4.14.135",
+    "@types/mssql": "^4.3.0",
+    "@types/multer": "^1.3.7",
+    "@types/node": "^12.6.8",
+    "copyfiles": "^2.1.1",
+    "morgan": "^1.9.1",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "typescript": "^3.2.2"
+  }
+}
