@@ -16,8 +16,14 @@ export default {
   },
   loading: { color: "#3B8070" },
   css: ["~/assets/css/main.css"],
-  build: {},
+  build: {
+    vendor: ["vuetify"]
+  },
   buildModules: ["@nuxt/typescript-build", "@nuxtjs/vuetify"],
+  plugins: ["~plugins/vuetify.ts"],
+  vuetify: {
+    customVariables: ["~/assets/variables.scss"]
+  },
   modules: ["@nuxtjs/axios"],
   axios: {}
 };
