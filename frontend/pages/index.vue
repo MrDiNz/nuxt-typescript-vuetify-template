@@ -1,31 +1,29 @@
 <template>
-  <section>
-    <h1 class="header">Nuxt TypeScript Starter</h1>
-    <v-btn @click="testCLick" class="error">test</v-btn>
-    <v-icon>fas fa-bar</v-icon>
-  </section>
+  <div>
+    <v-row class="justify-center">
+      <v-col cols="2">
+        test
+        <v-icon>fas fa-bars</v-icon>
+      </v-col>
+      <v-col cols="2">
+        test
+        <v-icon>fas fa-bars</v-icon>
+      </v-col>
+    </v-row>
+    <v-color-picker></v-color-picker>
+    <Card />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import { State } from "vuex-class";
+import Card from "~/components/Card.vue";
 
 @Component({
-  components: {}
+  components: { Card }
 })
-export default class extends Vue {
-  testCLick() {
-    this.$router.push("/testRoute");
-  }
-}
+export default class extends Vue {}
 </script>
 
-<style scoped>
-.header {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>
+<style scoped></style>
