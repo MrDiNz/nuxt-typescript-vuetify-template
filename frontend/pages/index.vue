@@ -23,7 +23,7 @@ import Card from "~/components/Card.vue";
 @Component({
   components: { Card }
 })
-export default class extends Vue {}
+export default class index extends Vue {}
 </script>
 
 <style scoped></style>

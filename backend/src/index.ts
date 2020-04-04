@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 import express from "express";
-import {gExpressMiddleware} from "./express-extension";
+import { gExpressMiddleware } from "./express-extension";
 import router from "./routes/index";
 
 const app = express();
@@ -36,6 +36,6 @@ app.use("/", router);
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server listen on port ${process.env.SERVER_PORT}`);
 });
-app.listen(process.env.SERVER_SSL_PORT, () => {
-  console.log(`Server listen on port ${process.env.SERVER_SSL_PORT}`);
-});
+// app.listen(process.env.SERVER_SSL_PORT, () => {
+//   console.log(`Server listen on port ${process.env.SERVER_SSL_PORT}`);
+// });
